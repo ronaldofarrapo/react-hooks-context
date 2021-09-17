@@ -8,7 +8,7 @@ function FormularioCadastro({ aoEnviar, validacoes }) {
 
   const [etapaAtual, setEtapaAtual] = useState(0);
   const [dadosAtualizados, setDadosAtualizados] = useState("");
-
+ 
   useEffect(() => {
     if (etapaAtual === formularios.length - 1) {
       aoEnviar(dadosAtualizados);
@@ -16,9 +16,9 @@ function FormularioCadastro({ aoEnviar, validacoes }) {
   })
 
   const formularios = [
-    <DadosUsuario aoEnviar={atualizarDados} validacoes={validacoes} />,
-    <DadosPessoais aoEnviar={atualizarDados} validacoes={validacoes} />,
-    <DadosEntrega aoEnviar={atualizarDados} validacoes={validacoes} />,
+    <DadosUsuario aoEnviar={atualizarDados} />,
+    <DadosPessoais aoEnviar={atualizarDados}  />,
+    <DadosEntrega aoEnviar={atualizarDados}  />,
     <Typography variant="h5">Obrigado por se Cadastrar!</Typography>
   ];
 
